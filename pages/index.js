@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Message from "../components/message";
 import { useEffect, useState } from "react";
@@ -55,16 +56,16 @@ export default function Home() {
           Desfrutem de forma GRATUITA.<br /><br />
 
           Nos siga nas redes sociais: <br/>
-          <a className="font-bold font-sans" href="https://www.dotspaced.com/links" target="_blank">@spacedsoft</a>
+          <a className="font-bold font-sans" href="https://www.dotspaced.com/links">@spacedsoft</a>
           <br/>
-          <a className="font-bold font-sans" href="https://www.dotspaced.com/henry" target="_blank">@henrymartinsb</a>
+          <a className="font-bold font-sans" href="https://www.dotspaced.com/henry">@henrymartinsb</a>
 
           <br /><br />
         </p>
       </div>
       <br />
       <footer>
-        <p className="text-sm text-center">© 2023 by <a className="font-bold font-object italic text-spaced" href="https://dotspaced.com" target="_blank">Spaced</a> - All rights reserved.</p>
+        <p className="text-sm text-center">© 2023 by <a className="font-bold font-object italic text-spaced" href="https://dotspaced.com">Spaced</a> - All rights reserved.</p>
       </footer>
     </div>
   );

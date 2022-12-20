@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Message from "../components/message";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -82,12 +83,7 @@ export default function Details() {
           {allMessage?.map((message) => (
             <div className="bg-white p-4 my-4 border-2" key={message.time}>
               <div className="flex items-center gap-2 mb-4">
-                <img
-                  className="w-10 rounded-full"
-                  src={message.avatar}
-                  alt=""
-                />
-                <h2 className="font-object">{message.userName}</h2>
+                <h2 className="font-bold">🖥️ {message.userName}</h2>
               </div>
               <h2>{message.message}</h2>
             </div>
