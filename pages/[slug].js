@@ -83,9 +83,12 @@ export default function Details() {
           {allMessage?.map((message) => (
             <div className="bg-white p-4 my-4 border-2" key={message.time}>
               <div className="flex items-center gap-2 mb-4">
-                <h2 className="font-bold">🖥️ {message.userName}</h2>
+                <span className="text-red-800 text-xl font-extrabold">♙</span>
+                <h2 className="font-extrabold text-lg font-object">
+                  {message.userName}:
+                </h2>
               </div>
-              <h2>{message.message}</h2>
+              <h2 className="text-sm indent-7">{message.message}</h2>
             </div>
           ))}
         </div>

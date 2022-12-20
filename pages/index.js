@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Message from "../components/message";
@@ -31,13 +32,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="my-12 text-lg font-medium">
-        <h2>Veja o que tá rolando por aqui 👀</h2>
+      <div className="my-12 font-medium text-base ">
+        <h2 className="font-bold">Veja o que tá rolando por aqui 👀👇</h2>
+        <br/>
         {allPosts.map((post) => (
-          <Message key={post.id} {...post}>
-            <Link href={{ pathname: `/${post.id}`, query: { ...post } }}>
-              <button>
-                {post.comments?.length > 0 ? post.comments?.length : 0} comments
+          <Message key={post.id} {...post} >
+            <Link href={{ pathname: `/${post.id}`, query: { ...post } }} >
+              <button className="indent-7 text-sm text-gray-500">
+                {post.comments?.length > 0 ? post.comments?.length : 0} comentários
               </button>
             </Link>
           </Message>
@@ -47,7 +49,7 @@ export default function Home() {
           Clique em <strong>"Solicitar acesso"</strong> para compartilhar suas ideias conosco.
         </p>
       </div>
-      <div className="border-2 bg-transparent p-2 rounded-md shadow">
+      <div className="border-2 bg-transparent p-4 rounded-md shadow text-base font-object">
         <p>
           <strong>Sejam bem-vindos(as)</strong><br /><br />
 
@@ -56,16 +58,16 @@ export default function Home() {
           Desfrutem de forma GRATUITA.<br /><br />
 
           Nos siga nas redes sociais: <br/>
-          <a className="font-bold font-sans" href="https://www.dotspaced.com/links">@spacedsoft</a>
+          <a className="font-bold" href="https://www.dotspaced.com/links" target="_blank">@spacedsoft</a>
           <br/>
-          <a className="font-bold font-sans" href="https://www.dotspaced.com/henry">@henrymartinsb</a>
+          <a className="font-bold" href="https://www.dotspaced.com/henry" target="_blank">@henrymartinsb</a>
 
           <br /><br />
         </p>
       </div>
       <br />
       <footer>
-        <p className="text-sm text-center">© 2023 by <a className="font-bold font-object italic text-spaced" href="https://dotspaced.com">Spaced</a> - All rights reserved.</p>
+        <p className="text-sm text-center">© 2023 by <a className="font-extrabold font-[Object Sans] italic text-spaced" href="https://dotspaced.com" target="_blank">Spaced</a> - All rights reserved.</p>
       </footer>
     </div>
   );

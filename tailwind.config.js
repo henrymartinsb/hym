@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: "Poppins",
-        object: [ "-apple-system", "Object Sans"],
+        object: [ "-apple-system", "Nunito"],
       },
       colors: {
         "spaced": "#0047ff"
