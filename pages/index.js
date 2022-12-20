@@ -46,7 +46,7 @@ export default function Home() {
         ))}
         <br />
         <p className="text-sm text-center">
-          Clique em <strong>"Solicitar acesso"</strong> para compartilhar suas ideias conosco.
+          Clique em <strong>&quot;Solicitar acesso&quot;</strong> para compartilhar suas ideias conosco.
         </p>
       </div>
       <div className="border-2 bg-transparent p-4 rounded-md shadow text-base font-object">

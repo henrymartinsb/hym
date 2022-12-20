@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { toast } from "react-toastify";
 
+
 export default function Post() {
   //Form state
   const [post, setPost] = useState({ description: "" });
