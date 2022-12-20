@@ -24,8 +24,13 @@ export default function Details() {
   //Submit a message
   const submitMessage = async () => {
     //Check if the user is logged
-    if (!auth.currentUser) return router.push("/auth/login");
-
+    if (!auth.currentUser) { console.log(auth.currentUser);
+      toast.error('Ih, você não tá cadastrado, clique em "Solicitar acesso" 😅', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 5000,
+    });
+      return;
+    }
     if (!message) {
       console.log(message);
       toast.error("Comentário vazio não dá pô 😅", {
