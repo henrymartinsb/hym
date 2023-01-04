@@ -31,7 +31,7 @@ export default function Post() {
       });
       return;
     }
-    if (post.description.length > 1000) {
+    if (post.description.length > 10000) {
       toast.error("Calma aí, não é um livro hahaha 😅", {
         position: toast.POSITION.TOP_CENTER,
         autoClose: 1500,
@@ -78,6 +78,7 @@ export default function Post() {
 
   return (
     <div className="my-20 p-12 shadow-lg rounded-lg max-w-md mx-auto">
+      <title>Post</title>
       <form onSubmit={submitPost}>
         <h1 className="text-2xl font-bold">
           {post.hasOwnProperty("id") ? "Editar post" : "Criar novo post"}
@@ -91,10 +92,10 @@ export default function Post() {
           ></textarea>
           <p
             className={`text-gray-800 font-medium text-sm ${
-              post.description.length > 1000 ? "text-red-600" : ""
+              post.description.length > 10000 ? "text-red-600" : ""
             }`}
           >
-            {post.description.length}/1000
+            {post.description.length}/10000
           </p>
         </div>
         <button

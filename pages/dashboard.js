@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { auth, db } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -46,7 +47,9 @@ export default function Dashboard() {
 
   return (
     <div>
-      <h1>Meus posts</h1>
+      <title>Meus posts</title>
+      <h1 className="font-bold text-lg">Meus posts</h1>
+      <br />
       <div>
         {posts.map((post) => {
           return (

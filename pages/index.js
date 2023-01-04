@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
 
       <div className="my-12 font-medium text-base ">
-        <h2 className="font-bold">Veja o que tá rolando por aqui 👀👇</h2>
+        <h2 className="font-bold text-lg">Veja o que tá rolando por aqui 👀👇</h2>
         <br/>
         {allPosts.map((post) => (
           <Message key={post.id} {...post} >
